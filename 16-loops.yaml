@@ -7,7 +7,7 @@
   tasks:
     - name: print names with vars use loops
       ansible.builtin.debug:
-        msg: "hello, {{ items }}"
+        msg: "hello, {{ item }}"
       loop: "{{ users }}"
 
 
