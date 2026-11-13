@@ -9,7 +9,7 @@
     - name: start nginx server
       service:
         name: nginx
-        state: installed
+        state: started
     - name: status nginx server
       service:
         name: nginx
