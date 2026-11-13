@@ -5,11 +5,11 @@
     NUMBER: 60
   tasks:
     - name: printing number based on conditon
-      anisble.builtin.debug:
+      ansible.builtin.debug:
         msg: "the number {{ NUMBER }} less than 100"
       when: NUMBER > 100
 
     - name: printing number based on conditon
-      anisble.builtin.debug:
+      ansible.builtin.debug:
         msg: "the number {{ NUMBER }} greater than 50"
       when: NUMBER >= 50
