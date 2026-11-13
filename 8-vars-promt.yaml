@@ -1,0 +1,16 @@
+- name: variable from prompt
+  hosts: local
+  connections: local
+  vars_prompt:
+    - name : NAME
+      prompt: please enter your name
+      private: false
+
+    - name: ROLE
+      prompt: please enter your role
+      private: true
+  tasks:
+    - name: printing prompt vars
+      ansible.builtin.debug:
+        msg: "Hello, {{ NAME }} here you work as {{ ROLE }}"
+

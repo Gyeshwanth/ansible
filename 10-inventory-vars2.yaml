@@ -1,0 +1,6 @@
+- name: inventory level vars type-2
+  hosts: frontend
+  tasks:
+    - name: printing vars from inventory.ini file
+      ansible.builtin.debug:
+        msg: "Hello, {{ NAME }} here you work as {{ ROLE }}"
