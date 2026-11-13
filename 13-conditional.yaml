@@ -4,7 +4,7 @@
   vars:
     NUMBER: 60
   tasks:
-    - name: printing number based on conditon
+    - name: printing number based on conditon when number greater 100 only
       ansible.builtin.debug:
         msg: "the number {{ NUMBER }} less than 100"
       when: NUMBER > 100
