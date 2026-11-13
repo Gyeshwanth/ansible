@@ -7,7 +7,7 @@
   tasks:
     - name: print names with vars use loops
       ansible.builtin.debug:
-        msg: "hello, {{ item }}"
+        msg: "hello, {{ item }}"   # item reserved in ansible for loops
       loop: "{{ users }}"
 
 
@@ -17,3 +17,11 @@
       loop:
         - ravi
         - appa
+
+    - name: print name with loops
+      ansible.builtin.dnf:
+        name: {{ item.name }}
+        state: {{ item.state }}
+      loop:
+        - { name: 'unzip',state: 'present' }
+        - { name: 'mysql',state: 'absent'}
