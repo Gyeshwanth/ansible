@@ -1,8 +1,8 @@
 - name: file level vars play
   hosts: local
   connection: local
-  vars:
-    -userinfo.yaml
+  vars_files:
+    - userinfo.yaml
   tasks:
     - name: printing file vars
       ansible.builtin.debug:
