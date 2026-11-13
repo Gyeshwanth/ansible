@@ -1,5 +1,6 @@
 - name: loops
   hosts: frontend
+  become: yes
   vars:
     users:
       - yeshwanth
@@ -18,7 +19,7 @@
         - ravi
         - appa
 
-    - name: print name with loops
+    - name: install packages
       ansible.builtin.dnf:
         name: "{{ item.name }}"
         state: "{{ item.state }}"
