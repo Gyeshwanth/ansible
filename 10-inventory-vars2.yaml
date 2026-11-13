@@ -1,5 +1,6 @@
 - name: inventory level vars type-2
-  hosts: frontend
+  hosts: local
+  connection: local
   tasks:
     - name: printing vars from inventory.ini file
       ansible.builtin.debug:
