@@ -3,4 +3,4 @@
   tasks:
     - name: info gather     #(variable r info hosts example her frontend server info)
       ansible.builtin.debug:
-        msg: {{ ansible_facts }}
+        msg: "{{ ansible_facts }}"

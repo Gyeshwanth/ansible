@@ -1,0 +1,8 @@
+- name: control with gather facts
+  hosts: frontend
+  tasks:
+    - name: condition based facts variables
+      ansible.builtin.dnf:
+        name: nginx
+        state: present
+      when:
