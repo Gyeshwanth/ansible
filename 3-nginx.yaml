@@ -1,0 +1,16 @@
+- name: nginx play
+  hosts: frontend
+  become: true
+  tasks:
+    - name: install nginx server
+      dnf:                            # here module is dnf  this specific to RedHat distributions like how in shell script on mention top bash.
+        name: nginx                   #change this not work to other linux distubitions to make loosly coupled use ansible.builtin.package
+        state: present
+    - name: start nginx server
+      service:
+        name: nginx
+        state: installed
+    - name: status nginx server
+      service:
+        name: nginx
+        state: status
