@@ -9,10 +9,8 @@
   - name: start nginx server
     ansible.builtin.service:
       name: nginx
-      state: stopped
-  - name: hello world
-    ansible.builtin.debug:
-        msg: "Hello World"
+      state: started
+
 
 
 
