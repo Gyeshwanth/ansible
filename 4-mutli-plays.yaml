@@ -1,0 +1,25 @@
+- name: backend play
+  hosts: backend
+  tasks:
+   - name: this from backend task
+     ansible.builtin.debug:
+       msg: "this from backend"
+
+
+
+- name: frontend play
+  host: frontend
+  tasks:
+    - name: this from frontend task
+      ansible.builtin.debug:
+        msg: "this from frontend"
+
+
+
+- name: frontend play
+  host: local
+  connection: local
+  tasks:
+    - name: this from frontend task
+      ansible.builtin.debug:
+        msg: "this from frontend"

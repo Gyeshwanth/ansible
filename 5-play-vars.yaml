@@ -1,0 +1,10 @@
+- name: play-vars
+  hosts: local
+  connection: local
+  vars:
+    NAME: Yeshwanth
+    ROLE: Java backend dev...
+  tasks:
+    - name: printing play-vars
+      ansible.builtin.debug:
+        msg: "Hello, {{ NAME }}, here your role is {{ ROLE }}."
