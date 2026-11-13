@@ -1,5 +1,6 @@
 - name: control with gather facts
   hosts: frontend
+  become: yes
   tasks:
     - name: condition based facts variables
       ansible.builtin.dnf:
