@@ -1,0 +1,9 @@
+- name: file level vars play
+  hosts: local
+  connection: local
+  vars:
+    userinfo.yaml
+  tasks:
+    - name: printing file vars
+      ansible.builtin.debug:
+        msg: "Hello, {{ NAME }} here you work as {{ ROLE }}"

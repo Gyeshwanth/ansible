@@ -1,0 +1,17 @@
+- name: tasks level-vars
+  hosts: local
+  connection: local
+  vars:
+    NAME: Yeshwanth
+    ROLE: Java Backend Dev...
+  tasks:
+    - name: printing vars
+      vars:
+        NAME: Uma
+        ROLE: DevOps Engineer
+      ansible.builtin.debug:
+        msg: "Hello, {{ NAME }} here you work as {{ ROLE }}."
+
+    - name: printing vars again
+      ansible.builtin.debug:
+        msg: "Hello, {{ NAME }} here you work as {{ ROLE }}"

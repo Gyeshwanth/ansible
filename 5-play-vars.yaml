@@ -7,4 +7,8 @@
   tasks:
     - name: printing play-vars
       ansible.builtin.debug:
-        msg: "Hello, {{ NAME }}, here your role is {{ ROLE }}."
+        msg: "Hello, {{ NAME }} here you work as {{ ROLE }}."
+
+    - name: printing msg again
+      ansible.bulitin.debug:
+        msg: "Hello, {{ NAME }} here you work as {{ ROLE }}."
