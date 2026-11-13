@@ -1,0 +1,19 @@
+- name: loops
+  hosts: frontend
+  vars:
+    users:
+      - yeshwanth
+      - uma
+  tasks:
+    - name: print names with vars use loops
+      ansible.builtin.debug:
+        msg: "hello, {{ items }}"
+      loop: "{{ users }}"
+
+
+    - name: print name with loops
+      ansible.builtin.debug:
+        msg: "hello, {{ item }}"
+      loop:
+        - ravi
+        - appa
