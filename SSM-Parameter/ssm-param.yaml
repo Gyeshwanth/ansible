@@ -1,0 +1,20 @@
+- name: Install Python, boto3 and botocore
+  hosts: local
+  connection: local
+  become: yes
+
+  tasks:
+    - name: Install required software
+      ansible.builtin.dnf:
+        name:
+          - python3
+          - python3-pip
+        state: present
+
+    - name: Install boto3 and botocore
+      ansible.builtin.pip:
+        name:
+          - boto3>=1.35.0
+          - botocore>=1.35.0
+        executable: pip3
+        state: present
