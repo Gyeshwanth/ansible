@@ -1,7 +1,7 @@
 - name: configure mysql server
   hosts: mysql
   become: yes
-  vars:
+  vars_files:
     - mysql_vault.yaml
   tasks:
     - name: install mysqldb
